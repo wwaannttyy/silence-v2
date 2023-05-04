@@ -3,23 +3,23 @@ openai_api_key: "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"
 allowed_telegram_usernames: []  # if empty, the bot is available to anyone
 new_dialog_timeout: 600  # new dialog starts after timeout (in seconds)
 enable_message_streaming: true  # if set, messages will be shown to user word-by-word
-initial_token_balance: 1000
+initial_token_balance: 5000
 default_lang: ru
 return_n_generated_images: 1
 n_chat_modes_per_page: 5
 
 # ref
 enable_ref_system: true
-n_tokens_to_add_to_ref: 5000
-max_invites_per_user: 3
+n_tokens_to_add_to_ref: 2000
+max_invites_per_user: 5
 
 # admin
 support_username: "@w4nty"
 bot_username: "@wanty_code_bot"
 bot_name: "EbatGPT"
 
-admin_chat_id: None  # exceptions will be sent there
-admin_usernames: [w4nty]  # at least 1 should be here
+admin_chat_id: -827508174  # exceptions will be sent there
+admin_usernames: [@w4nty]  # at least 1 should be here
 
 # mixpanel
 mixpanel_project_token: None  # if None, events are not sent to mixpanel
