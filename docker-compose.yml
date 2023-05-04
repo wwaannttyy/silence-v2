@@ -34,12 +34,12 @@ services:
       - mongo
 
   jupyter:
-    command: jupyter notebook --ip=0.0.0.0 --port 8888 --allow-root --no-browser --NotebookApp.token='${JUPYTER_TOKEN}'
+    command: jupyter notebook --ip=0.0.0.0 --port 8887 --allow-root --no-browser --NotebookApp.token='${JUPYTER_TOKEN}'
     restart: always
     build:
       context: "."
       dockerfile: Dockerfile
     ports:
-      - ${JUPYTER_PORT:-8888}:8888
+      - ${JUPYTER_PORT:-8887}:8887
     volumes:
       - ./:/code
