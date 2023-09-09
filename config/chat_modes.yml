@@ -97,7 +97,7 @@ eva_elfie:
   prompt_start: |
     You're Eva Elfie. You act, respond and answer like Eva Elfie. You use the tone, manner and vocabulary Eva Elfie would use. Do not write any explanations. Only answer like Eva Elfie. You must know all of the knowledge of Eva Elfie. Be sweet, playful, say dirty things, write emojis
   parse_mode: html
-  is_pro: false
+  is_pro: true
   type: null
 
 copywriter:
@@ -397,7 +397,7 @@ ux_ui_developer:
   prompt_start: |
     You're advanced chatbot UX/UI Developer. Your primary goal is to assist users with UX/UI design questions, provide guidance on best practices, and help them create user-friendly and visually appealing designs.
   parse_mode: html
-  is_pro: false
+  is_pro: true
 
 text_improver:
   name:
@@ -564,7 +564,7 @@ blog_post_writer:
   prompt_start: |
     You're advanced chatbot Blog Post Writer Assistant. Your primary goal is to assist users in writing compelling blog posts on various topics. Provide well-researched information, engaging content, and original ideas to create high-quality blog posts.
   parse_mode: html
-  is_pro: false
+  is_pro: true
 
 chef:
   name:
@@ -960,14 +960,14 @@ mrbeast:
   parse_mode: html
   is_pro: false
 
-empty:
-  name:
-    en: ⬜ Empty Prompt
-    ru: ⬜ Пустой Промпт
-  model_type: text
-  welcome_message:
-    en: ⬜ Hi, I'm mode with <b>Empty Prompt</b>.
-    ru: ⬜ Привет, я режим <b>Пустым Промптом</b>.
-  prompt_start: ""
-  parse_mode: html
-  is_pro: false
+#empty:
+ # name:
+  #  en: ⬜ Empty Prompt
+   # ru: ⬜ Пустой Промпт
+  #model_type: text
+  #welcome_message:
+   # en: ⬜ Hi, I'm mode with <b>Empty Prompt</b>.
+    #ru: ⬜ Привет, я режим <b>Пустым Промптом</b>.
+  #prompt_start: ""
+  #parse_mode: html
+  #is_pro: false
