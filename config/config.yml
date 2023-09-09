@@ -6,7 +6,7 @@ enable_message_streaming: true  # if set, messages will be shown to user word-by
 initial_token_balance: 5000
 default_lang: ru
 return_n_generated_images: 1
-n_chat_modes_per_page: 5
+n_chat_modes_per_page: 7
 
 # ref
 enable_ref_system: true
@@ -16,7 +16,7 @@ max_invites_per_user: 5
 # admin
 support_username: "@w4nty"
 bot_username: "@wanty_code_bot"
-bot_name: "EbatGPT"
+bot_name: "AIAvenueGPT"
 
 admin_chat_id: -827508174  # exceptions will be sent there
 admin_usernames: [@w4nty]  # at least 1 should be here
