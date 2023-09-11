@@ -523,7 +523,7 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
                 return
 
             # send placeholder message to user
-            placeholder_message = await update.message.reply_text("...")
+            placeholder_message = await update.message.reply_text("⏳")
 
             dialog_messages = db.get_dialog_messages(user_id, dialog_id=None)
             parse_mode = {
