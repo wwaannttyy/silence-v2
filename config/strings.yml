@@ -202,7 +202,7 @@ exception:
 welcome_message_1:
   en:
     - "Hi!"
-    - "I'm the most advanced <b>Artificial Intelligence</b> in the world (created by OpenAI)."
+    - "I'm the most advanced <b>Artificial Intelligence</b> in the world."
     - ""
     - "I can help you with <b>any task</b>. For example:"
     - "- write/debug/explain code"
@@ -215,7 +215,7 @@ welcome_message_1:
     - "- ... <b>anything you want</b>!"
   ru:
     - "Привет!"
-    - "Я самый продвинутый <b>Искусственный Интеллект</b> в мире (создан компанией OpenAI)."
+    - "Я самый продвинутый <b>Искусственный Интеллект</b> в мире."
     - ""
     - "Я могу помочь вам с <b>любой задачей</b>. Например:"
     - "- написать/отладить/объяснить код"
@@ -293,10 +293,10 @@ your_friend_joined:
   ru: |
     <a href="tg://user?id={friend_user_id}">Ваш друг</a> только что присоединился к боту по вашему инвайту!
 
-redirect_to_chatgpt_plus:
-  en: |
-    This chat mode is available in <a href="https://t.me/chatgpt_plus1_bot?start=password=chatgptplus">another bot</a>, if you know what I mean 😏
-    🍓 <a href="https://t.me/chatgpt_plus1_bot?start=password=chatgptplus">Start the bot</a>
-  ru: |
-    Этот режим доступен в <a href="https://t.me/chatgpt_plus1_bot?start=password=chatgptplus">другом боте</a>, если вы понимаете, о чём я 😏
-    🍓 <a href="https://t.me/chatgpt_plus1_bot?start=password=chatgptplus">Запустить бота</a>
+#redirect_to_chatgpt_plus:
+ # en: |
+  #  This chat mode is available in <a href="https://t.me/chatgpt_plus1_bot?start=password=chatgptplus">another bot</a>, if you know what I mean 😏
+   # 🍓 <a href="https://t.me/chatgpt_plus1_bot?start=password=chatgptplus">Start the bot</a>
+  #ru: |
+   # Этот режим доступен в <a href="https://t.me/chatgpt_plus1_bot?start=password=chatgptplus">другом боте</a>, если вы понимаете, о чём я 😏
+    #🍓 <a href="https://t.me/chatgpt_plus1_bot?start=password=chatgptplus">Запустить бота</a>
