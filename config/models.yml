@@ -85,7 +85,7 @@ info:
   dalle-2:
     type: image
     is_pro: false
-    price_per_1_image: 0.018  # 512x512
+    price_per_1_image: 0.020  # 512x512
 
   whisper:
     type: audio
