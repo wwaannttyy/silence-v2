@@ -1,5 +1,5 @@
-telegram_token: "5407387141:AAFwuoveBIDnpgz_D6EvZR2KLPHC4on_m4U"
-openai_api_key: "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"
+telegram_token: "5957274122:AAFTEZIgm7MzM8Kj7l-vDo8Ba-F6Il8U5os"
+openai_api_key: "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"
 allowed_telegram_usernames: []  # if empty, the bot is available to anyone
 new_dialog_timeout: 600  # new dialog starts after timeout (in seconds)
 enable_message_streaming: true  # if set, messages will be shown to user word-by-word
@@ -15,10 +15,10 @@ max_invites_per_user: 5
 
 # admin
 support_username: "@w4nty"
-bot_username: "@wanty_code_bot"
+bot_username: "@aiavenuebot"
 bot_name: "AIAvenueGPT"
 
-admin_chat_id: -827508174  # exceptions will be sent there
+admin_chat_id: -1001804121807  # exceptions will be sent there
 admin_usernames: [@w4nty]  # at least 1 should be here
 
 # mixpanel
