@@ -1,5 +1,6 @@
 telegram_token: "5957274122:AAFTEZIgm7MzM8Kj7l-vDo8Ba-F6Il8U5os"
-openai_api_key: "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"
+openai_api_key: ""
+openai_api_base: null  # leave null to use default api base or you can put your own base url here
 allowed_telegram_usernames: []  # if empty, the bot is available to anyone
 new_dialog_timeout: 600  # new dialog starts after timeout (in seconds)
 enable_message_streaming: true  # if set, messages will be shown to user word-by-word
@@ -7,19 +8,20 @@ initial_token_balance: 5000
 default_lang: ru
 return_n_generated_images: 1
 n_chat_modes_per_page: 7
+image_size: "512x512" # the image size for image generation. Generated images can have a size of 256x256, 512x512, or 1024x1024 pixels. Smaller sizes are faster to generate.
 
 # ref
 enable_ref_system: true
-n_tokens_to_add_to_ref: 2000
+n_tokens_to_add_to_ref: 3000
 max_invites_per_user: 5
 
 # admin
-support_username: "@w4nty"
+support_username: "@aiavenuemgmt"
 bot_username: "@aiavenuebot"
 bot_name: "AIAvenueGPT"
 
 admin_chat_id: -1001804121807  # exceptions will be sent there
-admin_usernames: [@w4nty]  # at least 1 should be here
+admin_usernames: [w4nty]  # at least 1 should be here
 
 # mixpanel
 mixpanel_project_token: None  # if None, events are not sent to mixpanel
@@ -34,26 +36,26 @@ payment_methods:
       ru: 🌎💳 Зарубежные карты
     product_keys: ["100k_tokens_usd", "500k_tokens_usd", "1m_tokens_usd"]
 
-    token: ""  # from @BotFather
+    token: "390540012:LIVE:34400"  # from @BotFather
 
-  cryptomus:
-    type: cryptomus
-    name:
-      en: 💎 Crypto
-      ru: 💎 Криптовалюта
-    product_keys: ["100k_tokens_usd", "500k_tokens_usd", "1m_tokens_usd"]
+#  cryptomus:
+#    type: cryptomus
+#    name:
+#      en: 💎 Crypto
+#      ru: 💎 Криптовалюта
+#    product_keys: ["100k_tokens_usd", "500k_tokens_usd", "1m_tokens_usd"]
 
-    api_key: ""
-    merchant_id: ""
+#    api_key: ""
+#    merchant_id: ""
 
   russian_cards:
     type: telegram_payments
     name:
       en: 🇷🇺💳 RU cards
       ru: 🇷🇺💳 Российские карты
-    product_keys: ["100k_tokens_rub", "500k_tokens_rub", "1m_tokens_rub"]
+    product_keys: ["100k_tokens_rub", "500k_tokens_rub", "1m_tokens_rub", "3m_tokens_rub", "10m_tokens_rub", "50m_tokens_rub"]
 
-    token: ""  # from @BotFather
+    token: "390540012:LIVE:34400"  # from @BotFather
 
 products:
   # usd
@@ -86,28 +88,55 @@ products:
 
   # rub
   100k_tokens_rub:
-    title_on_button: "🟣 +100K tokens – 399₽"
-    title: "🟣 100,000 ChatGPT Tokens"
-    description: "Tap the button below and pay"
+    title_on_button: "🟣 +100,000 Токенов – 189₽"
+    title: "🟣 100,000 ChatGPT Токенов"
+    description: "Нажми кнопку ниже чтобы продолжить"
     photo_url: ""
     n_tokens_to_add: 100000
-    price: 399.0
+    price: 189.0
     currency: "RUB"
 
   500k_tokens_rub:
-    title_on_button: "🟣 +500K tokens – 999₽"
-    title: "🟣 500,000 ChatGPT Tokens"
-    description: "Tap the button below and pay"
+    title_on_button: "🟣 +500,000 Токенов – 499₽ (-10%)"
+    title: "🟣 500,000 ChatGPT Токенов"
+    description: "Нажми кнопку ниже чтобы оплатить"
     photo_url: ""
     n_tokens_to_add: 500000
-    price: 999.0
+    price: 499.0
     currency: "RUB"
 
   1m_tokens_rub:
-    title_on_button: "🟣 +1M tokens – 1 899₽"
-    title: "🟣 1,000,000 ChatGPT Tokens"
-    description: "Tap the button below and pay"
+    title_on_button: "🟣 +1,000,000 Токенов – 699₽ (-25%)"
+    title: "🟣 1,000,000 ChatGPT Токенов"
+    description: "Нажми кнопку ниже чтобы оплатить"
     photo_url: ""
     n_tokens_to_add: 1000000
-    price: 1899.0
+    price: 699.0
+    currency: "RUB"
+
+  3m_tokens_rub:
+    title_on_button: "🟣 +3,000,000 Токенов– 1 599₽ (-45%)"
+    title: "🟣 3,000,000 ChatGPT Токенов"
+    description: "Нажми кнопку ниже чтобы оплатить"
+    photo_url: ""
+    n_tokens_to_add: 3000000
+    price: 1599.0
+    currency: "RUB"
+
+  10m_tokens_rub:
+    title_on_button: "🟣 +10,000,000 Токенов – 4 599₽ (-50%)"
+    title: "🟣 10,000,000 ChatGPT Токенов"
+    description: "Нажми кнопку ниже чтобы оплатить"
+    photo_url: ""
+    n_tokens_to_add: 10000000
+    price: 4599.0
+    currency: "RUB"
+
+  50m_tokens_rub:
+    title_on_button: "🟣 +50,000,000 Токенов – 19 999₽ (-60%)"
+    title: "🟣 50,000,000 ChatGPT Токенов"
+    description: "Нажми кнопку ниже чтобы оплатить"
+    photo_url: ""
+    n_tokens_to_add: 50000000
+    price: 19999.0
     currency: "RUB"
