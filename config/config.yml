@@ -12,8 +12,8 @@ image_size: "512x512" # the image size for image generation. Generated images ca
 
 # ref
 enable_ref_system: true
-n_tokens_to_add_to_ref: 3000
-max_invites_per_user: 5
+n_tokens_to_add_to_ref: 5000
+max_invites_per_user: 100
 
 # admin
 support_username: "@aiavenuemgmt"
