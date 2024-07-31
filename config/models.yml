@@ -1,5 +1,5 @@
-available_text_models: ["gpt-3.5-turbo","gpt-4-1106-preview", "gpt-4-vision-preview", "gpt-4o"]
-# , "gpt-3.5-turbo-16k", "text-davinci-003", "gpt-4"
+available_text_models: ["gpt-3.5-turbo", "gpt-4-vision-preview", "gpt-4o", "gpt-4o-mini"]
+# , "gpt-3.5-turbo-16k", "text-davinci-003", "gpt-4", "gpt-4-1106-preview",
 info:
   gpt-3.5-turbo: #1
     type: chat_completion
@@ -181,6 +181,34 @@ info:
 
     price_per_1000_input_tokens: 0.01
     price_per_1000_output_tokens: 0.02
+
+    scores:
+      - title:
+          en: Smart
+          ru: Ум
+        score: 5
+
+      - title:
+          en: Fast
+          ru: Скорость
+        score: 5
+
+      - title:
+          en: Cheap
+          ru: Низкая стоимость
+        score: 1
+
+
+    gpt-4o-mini: #8
+    type: chat_completion
+    name: GPT-4o-mini
+    is_pro: false
+    description: 
+      en: ChatGPT is that well-known model. It's <b>fast</b> and <b>cheap</b>. Ideal for everyday tasks. If there are some tasks it can't handle, try the <b>GPT-4</b>.
+      ru: ChatGPT is that well-known model. It's <b>fast</b> and <b>cheap</b>. Ideal for everyday tasks. If there are some tasks it can't handle, try the <b>GPT-4</b>.
+
+    price_per_1000_input_tokens: 0.00015
+    price_per_1000_output_tokens: 0.0006
 
     scores:
       - title:
