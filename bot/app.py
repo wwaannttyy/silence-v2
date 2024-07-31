@@ -84,7 +84,7 @@ async def register_user(update: Update, context: CallbackContext, user: User):
     n_used_tokens = db.get_user_attribute(user.id, "n_used_tokens")
     if isinstance(n_used_tokens, int):  # old format
         new_n_used_tokens = {
-            "gpt-3.5-turbo": {
+            "gpt-4o-mini": {
                 "n_input_tokens": 0,
                 "n_output_tokens": n_used_tokens
             }
@@ -228,7 +228,7 @@ async def check_payment_status_job_fn(context: CallbackContext):
             product = config.products[payment_dict["product_key"]]
             amount = product["price"]
             if product["currency"] == "RUB":
-                amount /= 77
+                amount /= 85
 
             distinct_id, event_name, properties = (
                 user_id,
@@ -269,9 +269,9 @@ def run_not_expired_payment_status_check(job_queue: JobQueue, how_long: int = 40
 def convert_text_tokens_to_bot_tokens(model: str, n_input_tokens: int, n_output_tokens: int):
     """
     Text token – LLM token
-    Bot token – currency inside bot (1 bot token price == 1 gpt-3.5-turbo token price)
+    Bot token – currency inside bot (1 bot token price == 1 gpt-4o-mini token price)
     """
-    baseline_price_per_1000_tokens = config.models["info"]["gpt-3.5-turbo"]["price_per_1000_input_tokens"]
+    baseline_price_per_1000_tokens = config.models["info"]["gpt-4o-mini"]["price_per_1000_input_tokens"]
 
     n_bot_input_tokens = int(n_input_tokens * (config.models["info"][model]["price_per_1000_input_tokens"] / baseline_price_per_1000_tokens))
     n_bot_output_tokens = int(n_output_tokens * (config.models["info"][model]["price_per_1000_output_tokens"] / baseline_price_per_1000_tokens))
@@ -280,7 +280,7 @@ def convert_text_tokens_to_bot_tokens(model: str, n_input_tokens: int, n_output_
 
 
 def convert_generated_images_to_bot_tokens(model: str, n_generated_images: int):
-    baseline_price_per_1000_tokens = config.models["info"]["gpt-3.5-turbo"]["price_per_1000_input_tokens"]
+    baseline_price_per_1000_tokens = config.models["info"]["gpt-4o-mini"]["price_per_1000_input_tokens"]
 
     n_spent_dollars = n_generated_images * (config.models["info"][model]["price_per_1_image"])
     n_bot_tokens = int(n_spent_dollars / (baseline_price_per_1000_tokens / 1000))
@@ -289,7 +289,7 @@ def convert_generated_images_to_bot_tokens(model: str, n_generated_images: int):
 
 
 def convert_transcribed_seconds_to_bot_tokens(model: str, n_transcribed_seconds: float):
-    baseline_price_per_1000_tokens = config.models["info"]["gpt-3.5-turbo"]["price_per_1000_input_tokens"]
+    baseline_price_per_1000_tokens = config.models["info"]["gpt-4o-mini"]["price_per_1000_input_tokens"]
 
     n_spent_dollars = n_transcribed_seconds * (config.models["info"][model]["price_per_1_min"] / 60)
     n_bot_tokens = int(n_spent_dollars / (baseline_price_per_1000_tokens / 1000))
@@ -836,7 +836,7 @@ async def new_dialog_handle(update: Update, context: CallbackContext):
     user_id = update.message.from_user.id
     lang = db.get_user_lang(user_id)
     db.set_user_attribute(user_id, "last_interaction", datetime.now())
-    db.set_user_attribute(user_id, "current_model", "gpt-3.5-turbo")
+    db.set_user_attribute(user_id, "current_model", "gpt-4o-mini")
 
     db.start_new_dialog(user_id)
     text = strings["new_dialog"][lang]
